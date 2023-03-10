@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MojeObrazki</class>
+ <widget class="QMainWindow" name="MojeObrazki">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1005</width>
+    <height>553</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MojeObrazki</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>430</y>
+      <width>571</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>420</y>
+      <width>361</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>761</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QGraphicsView" name="graphicsView"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOtw_rz"/>
+   <addaction name="actionZapisz"/>
+   <addaction name="actionWyj_cie"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1005</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuPrzetwarzenie_obraz_w">
+    <property name="title">
+     <string>Przetwarzenie obrazów</string>
+    </property>
+    <addaction name="actionPokaz_obrazek"/>
+   </widget>
+   <widget class="QMenu" name="menuRGB">
+    <property name="title">
+     <string>RGB</string>
+    </property>
+    <addaction name="actionR"/>
+    <addaction name="actionG"/>
+    <addaction name="actionB"/>
+   </widget>
+   <widget class="QMenu" name="menuYCrCb">
+    <property name="title">
+     <string>YCrCb</string>
+    </property>
+    <widget class="QMenu" name="menuHSV">
+     <property name="title">
+      <string>HSV</string>
+     </property>
+     <addaction name="actionH"/>
+     <addaction name="actionS"/>
+     <addaction name="actionV"/>
+    </widget>
+    <addaction name="actionY"/>
+    <addaction name="actionCr"/>
+    <addaction name="actionCb"/>
+    <addaction name="menuHSV"/>
+   </widget>
+   <widget class="QMenu" name="menuLAB07_Kontrola_jasno_ci_i_kontrastu">
+    <property name="title">
+     <string>LAB07-Kontrola jasności i kontrastu</string>
+    </property>
+    <addaction name="actionLAB07"/>
+   </widget>
+   <widget class="QMenu" name="menuLAB8_Progowanie">
+    <property name="title">
+     <string>LAB8-Progowanie</string>
+    </property>
+    <addaction name="actionProgowanie"/>
+   </widget>
+   <widget class="QMenu" name="menuLAB9_Skalowanie">
+    <property name="title">
+     <string>LAB9-Skalowanie</string>
+    </property>
+    <addaction name="actionSkalowanie"/>
+    <addaction name="actionRotacja"/>
+   </widget>
+   <widget class="QMenu" name="menuLAB10_Przekszta_cenia_filtracyjne">
+    <property name="title">
+     <string>LAB10 - Przekształcenia filtracyjne</string>
+    </property>
+    <addaction name="actionMediana"/>
+    <addaction name="actionUsrednianie"/>
+    <addaction name="actionGauss"/>
+   </widget>
+   <addaction name="menuPrzetwarzenie_obraz_w"/>
+   <addaction name="menuRGB"/>
+   <addaction name="menuYCrCb"/>
+   <addaction name="menuLAB07_Kontrola_jasno_ci_i_kontrastu"/>
+   <addaction name="menuLAB8_Progowanie"/>
+   <addaction name="menuLAB9_Skalowanie"/>
+   <addaction name="menuLAB10_Przekszta_cenia_filtracyjne"/>
+  </widget>
+  <action name="actionOtw_rz">
+   <property name="icon">
+    <iconset resource="ikony.qrc">
+     <normaloff>:/new/prefix1/wejscie.jpeg</normaloff>:/new/prefix1/wejscie.jpeg</iconset>
+   </property>
+   <property name="text">
+    <string>Otwórz</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionZapisz">
+   <property name="icon">
+    <iconset resource="ikony.qrc">
+     <normaloff>:/new/prefix1/zapis.ico</normaloff>:/new/prefix1/zapis.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Zapisz</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionWyj_cie">
+   <property name="icon">
+    <iconset resource="ikony.qrc">
+     <normaloff>:/new/prefix1/wyjscie.png</normaloff>:/new/prefix1/wyjscie.png</iconset>
+   </property>
+   <property name="text">
+    <string>Wyjście</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+K</string>
+   </property>
+  </action>
+  <action name="actionR">
+   <property name="text">
+    <string>R</string>
+   </property>
+  </action>
+  <action name="actionG">
+   <property name="text">
+    <string>G</string>
+   </property>
+  </action>
+  <action name="actionB">
+   <property name="text">
+    <string>B</string>
+   </property>
+  </action>
+  <action name="actionPokaz_obrazek">
+   <property name="icon">
+    <iconset resource="ikony.qrc">
+     <normaloff>:/new/prefix1/ustawienia.png</normaloff>:/new/prefix1/ustawienia.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pokaz obrazek</string>
+   </property>
+  </action>
+  <action name="actionY">
+   <property name="text">
+    <string>Y</string>
+   </property>
+  </action>
+  <action name="actionCr">
+   <property name="text">
+    <string>Cr</string>
+   </property>
+  </action>
+  <action name="actionCb">
+   <property name="text">
+    <string>Cb</string>
+   </property>
+  </action>
+  <action name="actionYRB">
+   <property name="text">
+    <string>YRB</string>
+   </property>
+  </action>
+  <action name="actionH">
+   <property name="text">
+    <string>H</string>
+   </property>
+  </action>
+  <action name="actionS">
+   <property name="text">
+    <string>S</string>
+   </property>
+  </action>
+  <action name="actionV">
+   <property name="text">
+    <string>V</string>
+   </property>
+  </action>
+  <action name="actionLAB07">
+   <property name="text">
+    <string>LAB07</string>
+   </property>
+  </action>
+  <action name="actionProgowanie">
+   <property name="text">
+    <string>Progowanie</string>
+   </property>
+  </action>
+  <action name="actionSkalowanie">
+   <property name="text">
+    <string>Skalowanie</string>
+   </property>
+  </action>
+  <action name="actionRotacja">
+   <property name="text">
+    <string>Rotacja</string>
+   </property>
+  </action>
+  <action name="actionMediana">
+   <property name="text">
+    <string>Mediana</string>
+   </property>
+  </action>
+  <action name="actionUsrednianie">
+   <property name="text">
+    <string>Usrednianie</string>
+   </property>
+  </action>
+  <action name="actionGauss">
+   <property name="text">
+    <string>Gauss</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="ikony.qrc"/>
+ </resources>
+ <connections/>
+</ui>
